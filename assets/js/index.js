@@ -8,8 +8,32 @@ gsap.ticker.add((time) => {
 gsap.ticker.lagSmoothing(0);
 
 // header js
-$('.header__list .header__item:last-child').on('click', function(){
-    $('.header__lang-dropdown').toggleClass('active');
+$('.header__menu-trigger').on('click', function(event){
+    event.stopPropagation();
+    const $dropdown = $(this).siblings('.header__product-dropdown');
+    const isActive = $dropdown.hasClass('active');
+
+    $('.header__product-dropdown').removeClass('active');
+    $('.header__menu-trigger').attr('aria-expanded', 'false');
+
+    if (!isActive) {
+        $dropdown.addClass('active');
+        $(this).attr('aria-expanded', 'true');
+    }
+
+    $('.header__lang-dropdown').removeClass('active');
+});
+
+$('.header__item--lang').on('click', function(event){
+    event.stopPropagation();
+    $('.header__product-dropdown').removeClass('active');
+    $('.header__menu-trigger').attr('aria-expanded', 'false');
+    $(this).find('.header__lang-dropdown').toggleClass('active');
+});
+
+$(document).on('click', function(){
+    $('.header__product-dropdown, .header__lang-dropdown').removeClass('active');
+    $('.header__menu-trigger').attr('aria-expanded', 'false');
 });
 
 // top-btn js
