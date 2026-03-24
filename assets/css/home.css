@@ -392,7 +392,7 @@ a{
 .simple-footer__brand img{
     width: 120px;
     margin-bottom: 14px;
-    filter: brightness(0) invert(1);
+    filter: none;
 }
 
 .simple-footer__brand p{
