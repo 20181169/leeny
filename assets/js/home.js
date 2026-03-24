@@ -1,34 +1,48 @@
-const homeDropdown = document.querySelector('.site-nav__dropdown');
-const homeTrigger = document.querySelector('.site-nav__trigger');
-const homeMenu = document.querySelector('.site-nav__menu');
+const homeDropdowns = document.querySelectorAll('.site-nav__dropdown');
 const mobileToggle = document.querySelector('.site-header__toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
 
-if (homeDropdown && homeTrigger && homeMenu) {
-    const closeHomeMenu = () => {
-        homeMenu.classList.remove('is-open');
-        homeTrigger.setAttribute('aria-expanded', 'false');
+if (homeDropdowns.length) {
+    const closeAllMenus = () => {
+        homeDropdowns.forEach((dropdown) => {
+            const trigger = dropdown.querySelector('.site-nav__trigger');
+            const menu = dropdown.querySelector('.site-nav__menu');
+            if (trigger && menu) {
+                menu.classList.remove('is-open');
+                trigger.setAttribute('aria-expanded', 'false');
+            }
+        });
     };
 
-    homeTrigger.addEventListener('click', (event) => {
-        event.stopPropagation();
-        const shouldOpen = !homeMenu.classList.contains('is-open');
-        closeHomeMenu();
-        if (shouldOpen) {
-            homeMenu.classList.add('is-open');
-            homeTrigger.setAttribute('aria-expanded', 'true');
+    homeDropdowns.forEach((dropdown) => {
+        const trigger = dropdown.querySelector('.site-nav__trigger');
+        const menu = dropdown.querySelector('.site-nav__menu');
+
+        if (!trigger || !menu) {
+            return;
         }
+
+        trigger.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const shouldOpen = !menu.classList.contains('is-open');
+            closeAllMenus();
+            if (shouldOpen) {
+                menu.classList.add('is-open');
+                trigger.setAttribute('aria-expanded', 'true');
+            }
+        });
     });
 
     document.addEventListener('click', (event) => {
-        if (!homeDropdown.contains(event.target)) {
-            closeHomeMenu();
+        const clickedInsideDropdown = Array.from(homeDropdowns).some((dropdown) => dropdown.contains(event.target));
+        if (!clickedInsideDropdown) {
+            closeAllMenus();
         }
     });
 
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
-            closeHomeMenu();
+            closeAllMenus();
         }
     });
 }

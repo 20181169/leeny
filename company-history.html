@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EnterPrise | Watermelon Main</title>
+    <title>EnterPrise | 연혁</title>
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/fonts.css">
     <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/company.css">
     <script src="./assets/js/home.js" defer></script>
 </head>
-<body class="home-page">
+<body class="home-page company-page history-page">
     <header class="site-header site-header--minimal site-header--productlike">
         <div class="site-header__inner">
             <a href="./index.html" class="site-header__logo" aria-label="EnterPrise home">
@@ -22,7 +23,7 @@
                     <button type="button" class="site-nav__trigger site-nav__trigger--active" aria-expanded="false">Company</button>
                     <div class="site-nav__menu">
                         <a href="./company-overview.html">회사개요</a>
-                        <a href="./company-history.html">연혁</a>
+                        <a href="./company-history.html" class="is-current">연혁</a>
                     </div>
                 </div>
                 <div class="site-nav__dropdown">
@@ -41,7 +42,7 @@
 
         <div class="mobile-menu" id="mobile-menu">
             <a href="./company-overview.html">회사개요</a>
-            <a href="./company-history.html">연혁</a>
+            <a href="./company-history.html" class="is-current">연혁</a>
             <a href="./product-baby-kids.html">Baby &amp; Kids</a>
             <a href="./product-trend.html">Trend</a>
             <a href="./product-travel-life.html">Travel &amp; Life</a>
@@ -50,66 +51,43 @@
         </div>
     </header>
 
-    <main class="simple-main">
-        <section class="simple-hero">
-            <div class="simple-hero__panel">
-                <div class="simple-hero__copy">
-                    <h1>
-                        Experts of<br>
-                        Baby &amp; Kids essentials<br>
-                        with <span>watermelon craft.</span>
-                    </h1>
-                </div>
-                <div class="simple-hero__visual">
-                    <div class="simple-hero__glow"></div>
-                    <img src="./assets/images/carseat_1.png" alt="Featured baby and kids essential">
-                </div>
-            </div>
+    <main class="company-main">
+        <section class="history-intro">
+            <span class="history-intro__eyebrow">Brand History</span>
+            <h1>History</h1>
+            <p>EnterPrise의 주요 이력을 연도별로 정리했습니다.</p>
         </section>
 
-        <section class="simple-intro">
-            <div class="simple-intro__inner">
-                <div class="simple-intro__lead">
-                    <p>
-                        아이를 위한 감성과 스타일의 가치를 만들어 나가는 브랜드로서,
-                        더 편안한 이동과 일상을 위한 제품을 제안합니다.
-                    </p>
-                    <p>
-                        워터멜론 톤을 중심으로, 단정하고 강한 첫 인상을 주는 메인페이지를 목표로 구성했습니다.
-                    </p>
-                </div>
-                <div class="simple-intro__body">
-                    <strong>'why?' 우리의 시작입니다.</strong>
-                    <p>
-                        A baby is a special being and a complex subject to study.
-                        We observe, refine, and build thoughtful essentials for family life.
-                    </p>
-                    <div class="simple-intro__links">
-                        <a href="./product-baby-kids.html">Baby &amp; Kids</a>
-                        <a href="./product-trend.html">Trend</a>
-                        <a href="./product-travel-life.html">Travel &amp; Life</a>
-                        <a href="./product-wild-tales.html">Wild Tales</a>
+        <section class="history-layout history-layout--single">
+            <div class="history-timeline">
+                <article class="history-item">
+                    <strong>2013</strong>
+                    <div>
+                        <h3>Brand Launch</h3>
+                        <p>가족 중심 라이프스타일 브랜드 EnterPrise 출범. 초기 육아용품 라인업과 기본 브랜드 아이덴티티 확립.</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="simple-history">
-            <div class="simple-history__inner">
-                <div class="simple-history__title">
-                    <strong>Company</strong>
-                    <p>회사개요와 연혁은 별도 페이지로 분리해, 브랜드 소개 흐름이 더 또렷하게 보이도록 구성했습니다.</p>
-                </div>
-                <div class="simple-history__list">
-                    <article>
-                        <span>Info</span>
-                        <p><a href="./company-overview.html">회사개요 페이지</a>에서 브랜드 방향, 핵심 가치, 운영 톤을 한 번에 확인할 수 있습니다.</p>
-                    </article>
-                    <article>
-                        <span>Story</span>
-                        <p><a href="./company-history.html">연혁 페이지</a>에서는 브랜드의 시작부터 리뉴얼까지의 흐름을 타임라인으로 정리했습니다.</p>
-                    </article>
-                </div>
+                </article>
+                <article class="history-item">
+                    <strong>2017</strong>
+                    <div>
+                        <h3>Category Expansion</h3>
+                        <p>Baby &amp; Kids 카테고리를 중심으로 이동, 실내 생활, 외출 관련 제품군을 확장하며 브랜드 폭을 넓힘.</p>
+                    </div>
+                </article>
+                <article class="history-item">
+                    <strong>2021</strong>
+                    <div>
+                        <h3>Editorial Direction</h3>
+                        <p>제품 진열 중심 구조에서 한 단계 나아가, 브랜드 스토리텔링과 큐레이션 중심의 편집 방향을 강화.</p>
+                    </div>
+                </article>
+                <article class="history-item">
+                    <strong>2026</strong>
+                    <div>
+                        <h3>Watermelon Renewal</h3>
+                        <p>워터멜론 컬러 톤을 반영한 메인 리뉴얼과 함께 회사개요, 연혁, 제품소개 구조를 분리해 정보 흐름을 재정비.</p>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
@@ -122,7 +100,7 @@
             </div>
             <div class="simple-footer__links">
                 <a href="./company-overview.html">Company</a>
-                <a href="./company-history.html">History</a>
+                <a href="./company-history.html" class="is-current">History</a>
                 <a href="./product-baby-kids.html">Baby &amp; Kids</a>
                 <a href="./product-trend.html">Trend</a>
                 <a href="./product-travel-life.html">Travel &amp; Life</a>
