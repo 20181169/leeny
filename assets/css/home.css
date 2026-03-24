@@ -51,7 +51,7 @@ a{
     gap: 20px;
     max-width: 1640px;
     margin: 0 auto;
-    padding: 16px 20px;
+    padding: 14px 20px;
 }
 
 .site-header__logo{
@@ -84,13 +84,13 @@ a{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 38px;
-    padding: 8px 14px;
+    min-height: 50px;
+    padding: 10px 18px;
     border-radius: 999px;
     background: transparent;
     color: var(--wm-white);
     font-family: 'Archivo', sans-serif;
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: .08em;
     text-transform: uppercase;
@@ -145,13 +145,13 @@ a{
 
 .site-header__toggle{
     display: none;
-    padding: 9px 14px;
+    padding: 10px 16px;
     border: 1px solid rgba(255,255,255,.18);
     border-radius: 999px;
     background: rgba(255,255,255,.14);
     color: var(--wm-white);
     font-family: 'Archivo', sans-serif;
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: .08em;
     text-transform: uppercase;
@@ -390,7 +390,7 @@ a{
 }
 
 .simple-footer__brand img{
-    width: 120px;
+    width: 130px;
     margin-bottom: 14px;
     filter: none;
 }
@@ -441,20 +441,26 @@ a{
 }
 
 .site-header--productlike .site-header__inner{
-    padding: 18px 72px;
+    padding: 14px 72px;
 }
 
 .site-header--productlike .site-header__logo{
-    width: 112px;
+    width: 180px;
+    height: 56px;
     padding: 0;
     border: 0;
     border-radius: 0;
     background: transparent;
     backdrop-filter: none;
+    overflow: visible;
 }
 
 .site-header--productlike .site-header__logo img{
+    height: 100%;
+    object-fit: contain;
     filter: none;
+    transform: scale(1.28);
+    transform-origin: left center;
 }
 
 .site-header--productlike .site-nav{
@@ -470,9 +476,9 @@ a{
 .site-header--productlike .site-nav__trigger{
     position: relative;
     min-height: auto;
-    padding: 10px 16px;
+    padding: 10px 18px;
     color: var(--wm-text);
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: .06em;
     border-radius: 0;
     overflow: visible;
@@ -484,8 +490,8 @@ a{
     position: absolute;
     left: 14px;
     right: 14px;
-    bottom: 8px;
-    height: 10px;
+    bottom: 10px;
+    height: 14px;
     border-radius: 999px;
     background: rgba(240, 95, 121, 0.22);
     opacity: 0;
@@ -530,6 +536,7 @@ a{
     border: 1px solid var(--wm-line);
     background: rgba(255,255,255,.9);
     color: var(--wm-text);
+    padding: 10px 16px;
 }
 
 .site-header--productlike .mobile-menu a{
@@ -571,8 +578,7 @@ a{
     }
 
     .site-header--productlike .site-header__inner{
-        padding-left: 28px;
-        padding-right: 28px;
+        padding: 12px 28px;
     }
 }
 
@@ -625,7 +631,7 @@ a{
     }
 
     .site-header--productlike .site-header__inner{
-        padding-top: 16px;
-        padding-bottom: 16px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
