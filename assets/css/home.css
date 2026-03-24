@@ -187,14 +187,13 @@ a{
 
 .simple-hero__panel{
     position: relative;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(360px, .9fr);
+    display: flex;
     align-items: center;
     min-height: 620px;
     overflow: hidden;
     background:
-        linear-gradient(90deg, rgba(122, 33, 54, 0.88) 0%, rgba(122, 33, 54, 0.68) 34%, rgba(122, 33, 54, 0.18) 100%),
-        linear-gradient(135deg, rgba(240, 95, 121, 0.32), rgba(248, 196, 204, 0.28));
+        linear-gradient(90deg, rgba(122, 33, 54, 0.76) 0%, rgba(122, 33, 54, 0.54) 24%, rgba(122, 33, 54, 0.2) 52%, rgba(122, 33, 54, 0.04) 100%),
+        url('http://tnsinter.godohosting.com/public_html/todbi_com/main/main_rolllol_pc.jpg') center center / cover no-repeat;
     box-shadow: 0 12px 24px rgba(216, 74, 99, 0.08);
     border-radius: 0 0 24px 24px;
 }
@@ -203,58 +202,32 @@ a{
     content: '';
     position: absolute;
     inset: 0;
-    background:
-        radial-gradient(circle at left center, rgba(255, 181, 193, 0.2), transparent 28%),
-        linear-gradient(180deg, rgba(255,255,255,.02), rgba(122, 33, 54, 0.08));
+    background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(122, 33, 54, 0.06));
     pointer-events: none;
 }
 
-.simple-hero__copy,
-.simple-hero__visual{
+.simple-hero__copy{
     position: relative;
     z-index: 1;
 }
 
 .simple-hero__copy{
-    padding: 80px 20px 80px 120px;
+    max-width: 760px;
+    padding: 80px 40px 80px 120px;
 }
 
 .simple-hero__copy h1{
     margin: 0;
-    font-family: 'Archivo', sans-serif;
-    font-size: clamp(52px, 6vw, 86px);
+    font-family: 'NotoSansCJKkr', sans-serif;
+    font-size: clamp(42px, 5vw, 72px);
     font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -.04em;
+    line-height: 1.18;
+    letter-spacing: -.03em;
+    word-break: keep-all;
 }
 
 .simple-hero__copy span{
     color: #ffd1d9;
-}
-
-.simple-hero__visual{
-    display: flex;
-    align-items: end;
-    justify-content: center;
-    min-height: 620px;
-    padding: 60px 40px 0;
-}
-
-.simple-hero__glow{
-    position: absolute;
-    right: 8%;
-    top: 16%;
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 184, 196, 0.18), rgba(240, 95, 121, 0));
-}
-
-.simple-hero__visual img{
-    position: relative;
-    max-width: 520px;
-    object-fit: contain;
-    filter: drop-shadow(0 20px 40px rgba(0,0,0,.28));
 }
 
 .simple-intro{
@@ -374,25 +347,35 @@ a{
 }
 
 .simple-footer{
-    margin-top: 72px;
-    background:
-        linear-gradient(135deg, var(--wm-watermelon-deep), var(--wm-watermelon));
+    margin-top: 54px;
+    background: #f37b83;
     color: var(--wm-white);
 }
 
 .simple-footer__inner{
     display: grid;
-    grid-template-columns: 1.1fr 1fr .8fr;
-    gap: 28px;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: 16px;
     max-width: 1640px;
     margin: 0 auto;
-    padding: 30px 24px 34px;
+    padding: 16px 24px 10px;
+}
+
+.simple-footer__brand{
+    display: flex;
+    align-items: center;
+    min-height: 30px;
 }
 
 .simple-footer__brand img{
-    width: 130px;
-    margin-bottom: 14px;
+    width: 98px;
+    height: 30px;
+    margin-bottom: 0;
+    object-fit: contain;
     filter: none;
+    transform: scale(3.6);
+    transform-origin: left center;
 }
 
 .simple-footer__brand p{
@@ -406,7 +389,12 @@ a{
 .simple-footer__contact{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 7px;
+}
+
+.simple-footer__contact{
+    align-self: center;
+    justify-content: center;
 }
 
 .simple-footer__links a{
@@ -418,9 +406,9 @@ a{
 }
 
 .simple-footer__contact span{
-    margin-bottom: 6px;
+    margin-bottom: 2px;
     font-family: 'Archivo', sans-serif;
-    font-size: 12px;
+    font-size: 9px;
     font-weight: 700;
     letter-spacing: .14em;
     text-transform: uppercase;
@@ -429,7 +417,25 @@ a{
 .simple-footer__contact p{
     margin: 0;
     color: rgba(255,255,255,.84);
-    line-height: 1.7;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.simple-footer__bottom{
+    max-width: 1640px;
+    margin: 0 auto;
+    padding: 0 24px 12px;
+}
+
+.simple-footer__bottom p{
+    margin: 0;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,.22);
+    color: rgba(255,255,255,.78);
+    font-family: 'Archivo', sans-serif;
+    font-size: 9px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
 }
 
 .site-header--productlike{
@@ -445,7 +451,7 @@ a{
 }
 
 .site-header--productlike .site-header__logo{
-    width: 180px;
+    width: 210px;
     height: 56px;
     padding: 0;
     border: 0;
@@ -459,7 +465,7 @@ a{
     height: 100%;
     object-fit: contain;
     filter: none;
-    transform: scale(1.28);
+    transform: scale(1.95);
     transform-origin: left center;
 }
 
@@ -559,18 +565,12 @@ a{
         display: flex;
     }
 
-    .simple-hero__panel,
     .simple-intro__inner{
         grid-template-columns: 1fr;
     }
 
     .simple-hero__copy{
-        padding: 72px 28px 24px;
-    }
-
-    .simple-hero__visual{
-        min-height: 420px;
-        padding: 0 28px 20px;
+        padding: 72px 28px;
     }
 
     .simple-intro{
@@ -602,11 +602,6 @@ a{
         font-size: 42px;
     }
 
-    .simple-hero__visual{
-        min-height: 280px;
-        padding: 0 16px 18px;
-    }
-
     .simple-intro__inner{
         gap: 28px;
     }
@@ -626,6 +621,11 @@ a{
 
     .simple-footer__inner{
         grid-template-columns: 1fr;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .simple-footer__bottom{
         padding-left: 16px;
         padding-right: 16px;
     }
