@@ -60,18 +60,60 @@ a{
     gap: 10px;
 }
 
-.product-header__nav a{
+.product-header__dropdown{
+    position: relative;
+}
+
+.product-header__nav a,
+.product-header__trigger{
     padding: 10px 16px;
+    border: 0;
     border-radius: 999px;
+    background: transparent;
+    color: inherit;
     font-family: 'Archivo', sans-serif;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: .06em;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
-.product-header__nav a.is-active{
+.product-header__nav a.is-active,
+.product-header__trigger.is-active,
+.product-header__trigger[aria-expanded="true"]{
     background: var(--product-ink);
+    color: #fff;
+}
+
+.product-header__menu{
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    display: none;
+    flex-direction: column;
+    min-width: 188px;
+    padding: 12px;
+    border: 1px solid rgba(31, 26, 23, 0.12);
+    border-radius: 22px;
+    background: rgba(255,255,255,.96);
+    box-shadow: 0 18px 40px rgba(31, 26, 23, 0.12);
+    transform: translateX(-50%);
+}
+
+.product-header__menu.is-open{
+    display: flex;
+}
+
+.product-header__menu a{
+    padding: 11px 14px;
+    border-radius: 14px;
+    font-size: 13px;
+}
+
+.product-header__menu a.is-current,
+.product-header__menu a:hover{
+    background: rgba(31, 26, 23, 0.92);
     color: #fff;
 }
 
@@ -184,6 +226,10 @@ a{
     padding: 0 72px 88px;
 }
 
+.catalog [id]{
+    scroll-margin-top: 110px;
+}
+
 .catalog__top{
     display: flex;
     align-items: center;
@@ -247,6 +293,7 @@ a{
     display: flex;
     flex-direction: column;
     gap: 18px;
+    height: 100%;
 }
 
 .catalog__panel{
@@ -279,6 +326,131 @@ a{
     color: var(--product-muted);
     font-size: 15px;
     line-height: 1.75;
+}
+
+.catalog__panel--guide{
+    background: linear-gradient(180deg, rgba(255,255,255,.88), rgba(240, 211, 191, 0.42));
+}
+
+.catalog__guide-title{
+    margin: 0 0 16px;
+    font-family: 'Archivo', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -.03em;
+}
+
+.catalog__guide-list{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.catalog__guide-list li{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 14px;
+    border-radius: 16px;
+    background: rgba(255,255,255,.74);
+}
+
+.catalog__guide-list span{
+    color: var(--product-accent);
+    font-family: 'Archivo', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.catalog__guide-list strong{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.catalog__guide-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.catalog__guide-tags span{
+    padding: 9px 12px;
+    border-radius: 999px;
+    background: rgba(31, 26, 23, 0.9);
+    color: #fff;
+    font-family: 'Archivo', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.catalog__panel--promo{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 360px;
+    padding: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(240, 211, 191, 0.75));
+}
+
+.catalog__promo-media{
+    position: relative;
+    min-height: 240px;
+    flex: 1;
+}
+
+.catalog__promo-media::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(31, 26, 23, 0.04), rgba(31, 26, 23, 0.28));
+}
+
+.catalog__promo-media img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.catalog__promo-copy{
+    padding: 22px 20px 24px;
+}
+
+.catalog__promo-copy h3{
+    margin: 0 0 10px;
+    font-family: 'Archivo', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: .95;
+    letter-spacing: -.04em;
+}
+
+.catalog__promo-copy p{
+    margin: 0;
+    color: var(--product-muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.catalog__promo-link{
+    display: inline-flex;
+    align-items: center;
+    margin-top: 18px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(31, 26, 23, 0.9);
+    color: #fff;
+    font-family: 'Archivo', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
 }
 
 .catalog__content{

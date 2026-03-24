@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/fonts.css">
     <link rel="stylesheet" href="./assets/css/product.css">
+    <script src="./assets/js/product.js" defer></script>
 </head>
 <body class="product-page">
     <header class="product-header">
@@ -17,14 +18,22 @@
             </a>
             <nav class="product-header__nav" aria-label="Product navigation">
                 <a href="./index.html">Home</a>
-                <a href="./product-baby-kids.html" class="is-active">Product</a>
+                <div class="product-header__dropdown">
+                    <button type="button" class="product-header__trigger is-active" aria-expanded="false">Product</button>
+                    <div class="product-header__menu">
+                        <a href="./product-baby-kids.html" class="is-current">Baby &amp; Kids</a>
+                        <a href="./product-trend.html">Trend</a>
+                        <a href="./product-travel-life.html">Travel &amp; Life</a>
+                        <a href="./product-wild-tales.html">Wild Tales</a>
+                    </div>
+                </div>
                 <a href="./index.html">Contact</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="catalog">
+        <section class="catalog" id="baby-main">
             <div class="catalog__top">
 
                 <div class="catalog__toolbar">
@@ -37,10 +46,10 @@
                     <div class="catalog__panel">
                         <p class="catalog__label">Category</p>
                         <ul class="catalog__menu">
-                            <li><a href="#" class="is-active">Baby &amp; Kids Main</a></li>
-                            <li><a href="#">Nursery</a></li>
-                            <li><a href="#">Outdoor</a></li>
-                            <li><a href="#">Daily Care</a></li>
+                            <li><a href="./product-baby-kids.html" class="is-active">Baby &amp; Kids</a></li>
+                            <li><a href="./product-trend.html">Trend</a></li>
+                            <li><a href="./product-travel-life.html">Travel &amp; Life</a></li>
+                            <li><a href="./product-wild-tales.html">Wild Tales</a></li>
                         </ul>
                     </div>
                     <div class="catalog__panel catalog__panel--note">
@@ -49,6 +58,30 @@
                             참고하신 상품 리스트 화면처럼 카테고리, 추천 영역,
                             카드형 리스트가 한 화면에서 읽히도록 구성했습니다.
                         </p>
+                    </div>
+                    <div class="catalog__panel catalog__panel--guide">
+                        <p class="catalog__label">Quick Guide</p>
+                        <h3 class="catalog__guide-title">Age Pick</h3>
+                        <ul class="catalog__guide-list">
+                            <li><span>0-12M</span><strong>Soft touch essentials</strong></li>
+                            <li><span>1-3Y</span><strong>Daily mobility items</strong></li>
+                            <li><span>4Y+</span><strong>Play and travel picks</strong></li>
+                        </ul>
+                        <div class="catalog__guide-tags">
+                            <span>Free Shipping</span>
+                            <span>Gift Wrap</span>
+                        </div>
+                    </div>
+                    <div class="catalog__panel catalog__panel--promo">
+                        <div class="catalog__promo-media">
+                            <img src="./assets/images/gall_img01.jpg" alt="Baby and kids promotion">
+                        </div>
+                        <div class="catalog__promo-copy">
+                            <p class="catalog__label">Editor's Pick</p>
+                            <h3>Soft Ride Collection</h3>
+                            <p>외출, 수납, 휴식까지 이어지는 데일리 아이템 셀렉션을 한 번에 보여주는 샘플 배너입니다.</p>
+                            <a href="#" class="catalog__promo-link">View curated set</a>
+                        </div>
                     </div>
                 </aside>
 
@@ -64,7 +97,7 @@
                         </p>
                     </div>
 
-                    <div class="catalog__feature">
+                    <div class="catalog__feature" id="baby-nursery">
                         <div class="catalog__feature-image">
                             <img src="./assets/images/creator_img.jpg" alt="Featured baby and kids collection">
                         </div>
@@ -79,7 +112,7 @@
                     </div>
 
                     <div class="catalog__grid">
-                        <article class="product-card">
+                        <article class="product-card" id="baby-best">
                             <div class="product-card__image">
                                 <img src="./assets/images/carseat_1.png" alt="Petal Bloom toy basket">
                                 <span class="product-card__badge">BEST</span>
@@ -95,7 +128,7 @@
                             </div>
                         </article>
 
-                        <article class="product-card">
+                        <article class="product-card" id="baby-daily-care">
                             <div class="product-card__image">
                                 <img src="./assets/images/carseat_1.png" alt="Cloud milk tumbler set">
                                 <span class="product-card__badge">NEW</span>
@@ -111,7 +144,7 @@
                             </div>
                         </article>
 
-                        <article class="product-card">
+                        <article class="product-card" id="baby-outdoor">
                             <div class="product-card__image">
                                 <img src="./assets/images/gall_img03.jpg" alt="Calm study lap desk">
                                 <span class="product-card__badge">EDIT</span>

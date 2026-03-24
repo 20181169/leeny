@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product | Wild Tales</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/product.css">
+    <script src="./assets/js/product.js" defer></script>
+</head>
+<body class="product-page">
+    <header class="product-header">
+        <div class="product-header__inner">
+            <a href="./index.html" class="product-header__logo" aria-label="Enterprise home"><img src="./assets/images/logo.svg" alt="Enterprise"></a>
+            <nav class="product-header__nav" aria-label="Product navigation">
+                <a href="./index.html">Home</a>
+                <div class="product-header__dropdown">
+                    <button type="button" class="product-header__trigger is-active" aria-expanded="false">Product</button>
+                    <div class="product-header__menu">
+                        <a href="./product-baby-kids.html">Baby &amp; Kids</a>
+                        <a href="./product-trend.html">Trend</a>
+                        <a href="./product-travel-life.html">Travel &amp; Life</a>
+                        <a href="./product-wild-tales.html" class="is-current">Wild Tales</a>
+                    </div>
+                </div>
+                <a href="./index.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="catalog" id="wild-main">
+            <div class="catalog__top">
+                
+            </div>
+            <div class="catalog__layout">
+                <aside class="catalog__sidebar">
+                    <div class="catalog__panel">
+                        <p class="catalog__label">Category</p>
+                        <ul class="catalog__menu">
+                            <li><a href="./product-baby-kids.html">Baby &amp; Kids</a></li>
+                            <li><a href="./product-trend.html">Trend</a></li>
+                            <li><a href="./product-travel-life.html">Travel &amp; Life</a></li>
+                            <li><a href="./product-wild-tales.html" class="is-active">Wild Tales</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog__panel catalog__panel--note">
+                        <p class="catalog__label">Display Guide</p>
+                        <p>A story-driven category page with playful imagery, outdoor mood, and narrative product cards.</p>
+                    </div>
+                    <div class="catalog__panel catalog__panel--guide">
+                        <p class="catalog__label">Quick Guide</p>
+                        <h3 class="catalog__guide-title">Story Flow</h3>
+                        <ul class="catalog__guide-list">
+                            <li><span>Scene</span><strong>Forest, camp, and sky-inspired moments</strong></li>
+                            <li><span>Texture</span><strong>Soft layers for quiet adventure mood</strong></li>
+                            <li><span>Use</span><strong>Playful everyday storytelling</strong></li>
+                        </ul>
+                        <div class="catalog__guide-tags"><span>Story Pack</span><span>Outdoor Mood</span></div>
+                    </div>
+                    <div class="catalog__panel catalog__panel--promo">
+                        <div class="catalog__promo-media"><img src="./assets/images/gall_img01.jpg" alt="Wild tales promotion"></div>
+                        <div class="catalog__promo-copy">
+                            <p class="catalog__label">Editor's Pick</p>
+                            <h3>Little Forest Tales</h3>
+                            <p>Perfect for a seasonal story campaign, a themed collection, or a creative family catalog page.</p>
+                            <a href="#" class="catalog__promo-link">View curated set</a>
+                        </div>
+                    </div>
+                </aside>
+                <div class="catalog__content">
+                    <div class="catalog__headline">
+                        <div>
+                            <p class="catalog__label">Product List</p>
+                            <h2>Wild Tales Collection</h2>
+                        </div>
+                        <p class="catalog__summary">Sample layout for a playful narrative category with strong editorial mood and themed product cards.</p>
+                    </div>
+                    <div class="catalog__feature" id="wild-story-set">
+                        <div class="catalog__feature-image"><img src="./assets/images/gall_img01.jpg" alt="Featured wild tales collection"></div>
+                        <div class="catalog__feature-copy">
+                            <p class="catalog__label">Featured Story</p>
+                            <h3>Forest Afternoon Kit</h3>
+                            <p>Use the feature block to introduce a story set, a themed collection, or a family-friendly campaign.</p>
+                        </div>
+                    </div>
+                    <div class="catalog__grid">
+                        <article class="product-card"><div class="product-card__image"><img src="./assets/images/gall_img01.jpg" alt="Story picnic basket"><span class="product-card__badge">BEST</span></div><div class="product-card__body"><p class="product-card__category">Story</p><h3>Story Picnic Basket</h3><p class="product-card__desc">A soft floral and picnic mood for a playful family storytelling set.</p><div class="product-card__meta"><span>Sample Text</span><strong>32,000 KRW</strong></div></div></article>
+                        <article class="product-card" id="wild-cozy-camp"><div class="product-card__image"><img src="./assets/images/card_img07.png" alt="Cozy camp mat"><span class="product-card__badge">NEW</span></div><div class="product-card__body"><p class="product-card__category">Camp</p><h3>Cozy Camp Mat</h3><p class="product-card__desc">A layered floor item that supports quiet play and story-led rest.</p><div class="product-card__meta"><span>Sample Text</span><strong>39,000 KRW</strong></div></div></article>
+                        <article class="product-card" id="wild-adventure"><div class="product-card__image"><img src="./assets/images/card_img06.png" alt="Adventure apron set"><span class="product-card__badge">EDIT</span></div><div class="product-card__body"><p class="product-card__category">Play</p><h3>Adventure Apron Set</h3><p class="product-card__desc">A costume-like item for imaginative play, workshops, and maker moments.</p><div class="product-card__meta"><span>Sample Text</span><strong>25,000 KRW</strong></div></div></article>
+                        <article class="product-card"><div class="product-card__image"><img src="./assets/images/gall_img03.jpg" alt="Sky journal case"><span class="product-card__badge">SET</span></div><div class="product-card__body"><p class="product-card__category">Journal</p><h3>Sky Journal Case</h3><p class="product-card__desc">A calm everyday case for memory-keeping and themed story routines.</p><div class="product-card__meta"><span>Sample Text</span><strong>28,000 KRW</strong></div></div></article>
+                        <article class="product-card"><div class="product-card__image"><img src="./assets/images/carseat_1.png" alt="Explorer ride set"><span class="product-card__badge">PICK</span></div><div class="product-card__body"><p class="product-card__category">Move</p><h3>Explorer Ride Set</h3><p class="product-card__desc">A movement-focused item reimagined as part of an adventure story line.</p><div class="product-card__meta"><span>Sample Text</span><strong>48,000 KRW</strong></div></div></article>
+                        <article class="product-card"><div class="product-card__image"><img src="./assets/images/gall_img02.jpg" alt="Camp cup tote"><span class="product-card__badge">SALE</span></div><div class="product-card__body"><p class="product-card__category">Outdoor</p><h3>Camp Cup Tote</h3><p class="product-card__desc">A friendly outdoor-ready piece for simple storytelling and family trips.</p><div class="product-card__meta"><span>Sample Text</span><strong>20,000 KRW</strong></div></div></article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

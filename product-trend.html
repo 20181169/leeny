@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product | Trend</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/product.css">
+    <script src="./assets/js/product.js" defer></script>
+</head>
+<body class="product-page">
+    <header class="product-header">
+        <div class="product-header__inner">
+            <a href="./index.html" class="product-header__logo" aria-label="Enterprise home"><img src="./assets/images/logo.svg" alt="Enterprise"></a>
+            <nav class="product-header__nav" aria-label="Product navigation">
+                <a href="./index.html">Home</a>
+                <div class="product-header__dropdown">
+                    <button type="button" class="product-header__trigger is-active" aria-expanded="false">Product</button>
+                    <div class="product-header__menu">
+                        <a href="./product-baby-kids.html">Baby &amp; Kids</a>
+                        <a href="./product-trend.html" class="is-current">Trend</a>
+                        <a href="./product-travel-life.html">Travel &amp; Life</a>
+                        <a href="./product-wild-tales.html">Wild Tales</a>
+                    </div>
+                </div>
+                <a href="./index.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="catalog" id="trend-main">
+            <div class="catalog__top">
+                
+            </div>
+            <div class="catalog__layout">
+                <aside class="catalog__sidebar">
+                    <div class="catalog__panel">
+                        <p class="catalog__label">Category</p>
+                        <ul class="catalog__menu">
+                            <li><a href="./product-baby-kids.html">Baby &amp; Kids</a></li>
+                            <li><a href="./product-trend.html" class="is-active">Trend</a></li>
+                            <li><a href="./product-travel-life.html">Travel &amp; Life</a></li>
+                            <li><a href="./product-wild-tales.html">Wild Tales</a></li>
+                        </ul>
+                    </div>
+                    <div class="catalog__panel catalog__panel--note">
+                        <p class="catalog__label">Display Guide</p>
+                        <p>Minimal, bold, and modern product styling for a curated trend-focused catalog page.</p>
+                    </div>
+                    <div class="catalog__panel catalog__panel--guide">
+                        <p class="catalog__label">Quick Guide</p>
+                        <h3 class="catalog__guide-title">Trend Code</h3>
+                        <ul class="catalog__guide-list">
+                            <li><span>Color</span><strong>Warm beige and charcoal accents</strong></li>
+                            <li><span>Shape</span><strong>Soft edges with compact silhouettes</strong></li>
+                            <li><span>Feel</span><strong>Clean everyday essentials</strong></li>
+                        </ul>
+                        <div class="catalog__guide-tags"><span>New Drop</span><span>Curated</span></div>
+                    </div>
+                    <div class="catalog__panel catalog__panel--promo">
+                        <div class="catalog__promo-media"><img src="./assets/images/gall_img02.jpg" alt="Trend collection promotion"></div>
+                        <div class="catalog__promo-copy">
+                            <p class="catalog__label">Editor's Pick</p>
+                            <h3>Daily Trend Edit</h3>
+                            <p>Focused on clean shapes, warm neutrals, and easy-to-style everyday products.</p>
+                            <a href="#" class="catalog__promo-link">View curated set</a>
+                        </div>
+                    </div>
+                </aside>
+                <div class="catalog__content">
+                    <div class="catalog__headline">
+                        <div>
+                            <p class="catalog__label">Product List</p>
+                            <h2>Trend Everyday Collection</h2>
+                        </div>
+                        <p class="catalog__summary">Sample layout for a trend category with highlight imagery, curated copy, and product cards.</p>
+                    </div>
+                    <div class="catalog__feature" id="trend-new-edit">
+                        <div class="catalog__feature-image"><img src="./assets/images/gall_img02.jpg" alt="Featured trend collection"></div>
+                        <div class="catalog__feature-copy">
+                            <p class="catalog__label">Featured Story</p>
+                            <h3>Modern Kitchen Mood</h3>
+                            <p>Use this area for a campaign banner, a seasonal story, or a short trend-led product introduction.</p>
+                        </div>
+                    </div>
+                    <div class="catalog__grid">
+                        <article class="product-card" id="trend-best-seller"><div class="product-card__image"><img src="./assets/images/gall_img02.jpg" alt="Soft cream tumbler"><span class="product-card__badge">BEST</span></div><div class="product-card__body"><p class="product-card__category">Dining</p><h3>Soft Cream Tumbler</h3><p class="product-card__desc">Minimal silhouette with a calm neutral mood for everyday styling.</p><div class="product-card__meta"><span>Sample Text</span><strong>24,000 KRW</strong></div></div></article>
+                        <article class="product-card"><div class="product-card__image"><img src="./assets/images/card_img04.png" alt="Compact trend pouch"><span class="product-card__badge">NEW</span></div><div class="product-card__body"><p class="product-card__category">Storage</p><h3>Compact Trend Pouch</h3><p class="product-card__desc">A clean daily pouch for smart organization with a modern shape.</p><div class="product-card__meta"><span>Sample Text</span><strong>19,500 KRW</strong></div></div></article>
+                        <article class="product-card"><div class="product-card__image"><img src="./assets/images/gall_img03.jpg" alt="Quiet desk pad"><span class="product-card__badge">EDIT</span></div><div class="product-card__body"><p class="product-card__category">Desk</p><h3>Quiet Desk Pad</h3><p class="product-card__desc">A soft workspace essential designed to complement warm interiors.</p><div class="product-card__meta"><span>Sample Text</span><strong>31,000 KRW</strong></div></div></article>
+                        <article class="product-card"><div class="product-card__image"><img src="./assets/images/card_img06.png" alt="Color point apron"><span class="product-card__badge">SET</span></div><div class="product-card__body"><p class="product-card__category">Lifestyle</p><h3>Color Point Apron</h3><p class="product-card__desc">A trend-driven daily item for a cheerful but controlled color story.</p><div class="product-card__meta"><span>Sample Text</span><strong>27,000 KRW</strong></div></div></article>
+                        <article class="product-card" id="trend-color-story"><div class="product-card__image"><img src="./assets/images/gall_img01.jpg" alt="Bloom basket"><span class="product-card__badge">PICK</span></div><div class="product-card__body"><p class="product-card__category">Decor</p><h3>Bloom Basket</h3><p class="product-card__desc">A soft visual basket that adds a floral touch to casual living spaces.</p><div class="product-card__meta"><span>Sample Text</span><strong>29,000 KRW</strong></div></div></article>
+                        <article class="product-card"><div class="product-card__image"><img src="./assets/images/card_img07.png" alt="Layered floor cushion"><span class="product-card__badge">SALE</span></div><div class="product-card__body"><p class="product-card__category">Home</p><h3>Layered Floor Cushion</h3><p class="product-card__desc">A relaxed lounge piece for trend-led home and family styling.</p><div class="product-card__meta"><span>Sample Text</span><strong>43,000 KRW</strong></div></div></article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
