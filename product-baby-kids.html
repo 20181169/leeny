@@ -1,15 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product | Baby & Kids</title>
+    <title>Product | Baby &amp; Kids</title>
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/fonts.css">
     <link rel="stylesheet" href="./assets/css/home.css">
     <link rel="stylesheet" href="./assets/css/product.css">
     <script src="./assets/js/home.js" defer></script>
+    <script src="./assets/js/product-card-links.js" defer></script>
 </head>
 <body class="product-page">
     <header class="site-header site-header--minimal site-header--productlike">
@@ -21,8 +22,8 @@
                 <div class="site-nav__dropdown">
                     <button type="button" class="site-nav__trigger" aria-expanded="false">Company</button>
                     <div class="site-nav__menu">
-                        <a href="./company-overview.html">?뚯궗媛쒖슂</a>
-                        <a href="./company-history.html">?고쁺</a>
+                        <a href="./company-overview.html">Company Overview</a>
+                        <a href="./company-history.html">History</a>
                         <a href="./contact.html">Contact</a>
                     </div>
                 </div>
@@ -41,8 +42,8 @@
         </div>
 
         <div class="mobile-menu" id="mobile-menu">
-            <a href="./company-overview.html">?뚯궗媛쒖슂</a>
-            <a href="./company-history.html">?고쁺</a>
+            <a href="./company-overview.html">Company Overview</a>
+            <a href="./company-history.html">History</a>
             <a href="./contact.html">Contact</a>
             <a href="./product-baby-kids.html" class="is-current">Product</a>
         </div>
@@ -51,10 +52,7 @@
     <main>
         <section class="catalog" id="baby-main">
             <div class="catalog__top">
-
-                <div class="catalog__toolbar">
-
-                </div>
+                <div class="catalog__toolbar"></div>
             </div>
 
             <div class="catalog__layout">
@@ -71,8 +69,8 @@
                     <div class="catalog__panel catalog__panel--note">
                         <p class="catalog__label">Display Guide</p>
                         <p>
-                            참고하신 상품 리스트 화면처럼 카테고리, 추천 영역,
-                            카드형 리스트가 한 화면에서 읽히도록 구성했습니다.
+                            This sample page mirrors a curated shopping layout with category navigation,
+                            recommendation areas, and product cards arranged in one flow.
                         </p>
                     </div>
                     <div class="catalog__panel catalog__panel--guide">
@@ -95,7 +93,7 @@
                         <div class="catalog__promo-copy">
                             <p class="catalog__label">Editor's Pick</p>
                             <h3>Soft Ride Collection</h3>
-                            <p>외출, 수납, 휴식까지 이어지는 데일리 아이템 셀렉션을 한 번에 보여주는 샘플 배너입니다.</p>
+                            <p>A sample promotional banner that introduces a soft daily collection across outings, storage, and rest.</p>
                             <a href="#" class="catalog__promo-link">View curated set</a>
                         </div>
                     </div>
@@ -108,8 +106,8 @@
                             <h2>Baby &amp; Kids Everyday Collection</h2>
                         </div>
                         <p class="catalog__summary">
-                            예시 이미지와 텍스트를 활용한 목업 상품 카드입니다.
-                            실제 상품 데이터가 들어오면 카드 구조는 그대로 유지하면서 교체할 수 있습니다.
+                            This is a sample card list using example imagery and copy.
+                            When real product data is ready, you can replace only the text and images while keeping the layout structure.
                         </p>
                     </div>
 
@@ -121,14 +119,14 @@
                             <p class="catalog__label">Featured Story</p>
                             <h3>Weekend Play Kit</h3>
                             <p>
-                                부드러운 촉감의 파우치, 아이용 머그, 외출용 정리백을 하나의 세트로 제안하는
-                                메인 프로모션 영역입니다. 상단 배너 또는 추천 상품 영역을 대체해 사용할 수 있습니다.
+                                A featured set that combines soft-touch pouches, kids mugs, and outing organizers into one weekend-ready story.
+                                This area can also be used as a campaign banner or a recommended collection module.
                             </p>
                         </div>
                     </div>
 
                     <div class="catalog__grid">
-                        <article class="product-card" id="baby-best">
+                        <article class="product-card" id="baby-best" data-product-link="./detail-baby-petal-bloom-toy-basket.html" tabindex="0" role="link">
                             <div class="product-card__image">
                                 <img src="./assets/images/carseat_1.png" alt="Petal Bloom toy basket">
                                 <span class="product-card__badge">BEST</span>
@@ -136,7 +134,7 @@
                             <div class="product-card__body">
                                 <p class="product-card__category">Storage</p>
                                 <h3>Petal Bloom Toy Basket</h3>
-                                <p class="product-card__desc">꽃다발처럼 부드러운 컬러로 연출한 수납 바스켓 예시 상품</p>
+                                <p class="product-card__desc">A soft-color toy basket sample designed for tidy nursery storage and calm everyday styling.</p>
                                 <div class="product-card__meta">
                                     <span>Sample Text</span>
                                     <strong>29,000 KRW</strong>
@@ -144,7 +142,7 @@
                             </div>
                         </article>
 
-                        <article class="product-card" id="baby-daily-care">
+                        <article class="product-card" id="baby-daily-care" data-product-link="./detail-baby-cloud-milk-tumbler-set.html" tabindex="0" role="link">
                             <div class="product-card__image">
                                 <img src="./assets/images/carseat_1.png" alt="Cloud milk tumbler set">
                                 <span class="product-card__badge">NEW</span>
@@ -152,7 +150,7 @@
                             <div class="product-card__body">
                                 <p class="product-card__category">Dining</p>
                                 <h3>Cloud Milk Tumbler Set</h3>
-                                <p class="product-card__desc">아이 간식 시간에 맞춘 컵 세트와 트레이 구성 목업</p>
+                                <p class="product-card__desc">A sample tumbler and tray set arranged for easy snack-time routines.</p>
                                 <div class="product-card__meta">
                                     <span>Sample Text</span>
                                     <strong>18,500 KRW</strong>
@@ -160,7 +158,7 @@
                             </div>
                         </article>
 
-                        <article class="product-card" id="baby-outdoor">
+                        <article class="product-card" id="baby-outdoor" data-product-link="./detail-baby-calm-study-lap-desk.html" tabindex="0" role="link">
                             <div class="product-card__image">
                                 <img src="./assets/images/gall_img03.jpg" alt="Calm study lap desk">
                                 <span class="product-card__badge">EDIT</span>
@@ -168,7 +166,7 @@
                             <div class="product-card__body">
                                 <p class="product-card__category">Learning</p>
                                 <h3>Calm Study Lap Desk</h3>
-                                <p class="product-card__desc">집중 시간을 위한 쿠션형 미니 데스크 레이아웃 예시</p>
+                                <p class="product-card__desc">A cushioned mini desk sample for quiet reading, drawing, and home study time.</p>
                                 <div class="product-card__meta">
                                     <span>Sample Text</span>
                                     <strong>34,000 KRW</strong>
@@ -176,7 +174,7 @@
                             </div>
                         </article>
 
-                        <article class="product-card">
+                        <article class="product-card" data-product-link="./detail-baby-soft-travel-pouch-set.html" tabindex="0" role="link">
                             <div class="product-card__image">
                                 <img src="./assets/images/card_img04.png" alt="Soft travel pouch set">
                                 <span class="product-card__badge">SET</span>
@@ -184,7 +182,7 @@
                             <div class="product-card__body">
                                 <p class="product-card__category">Outdoor</p>
                                 <h3>Soft Travel Pouch Set</h3>
-                                <p class="product-card__desc">외출 시 소지품을 나눠 담는 키즈 파우치 세트용 카드</p>
+                                <p class="product-card__desc">A compact travel pouch set sample for simple outing organization.</p>
                                 <div class="product-card__meta">
                                     <span>Sample Text</span>
                                     <strong>22,000 KRW</strong>
@@ -192,7 +190,7 @@
                             </div>
                         </article>
 
-                        <article class="product-card">
+                        <article class="product-card" data-product-link="./detail-baby-little-garden-apron.html" tabindex="0" role="link">
                             <div class="product-card__image">
                                 <img src="./assets/images/card_img06.png" alt="Little garden apron">
                                 <span class="product-card__badge">PICK</span>
@@ -200,7 +198,7 @@
                             <div class="product-card__body">
                                 <p class="product-card__category">Activity</p>
                                 <h3>Little Garden Apron</h3>
-                                <p class="product-card__desc">체험 수업과 놀이 시간을 위한 앞치마 세트 예시 상품</p>
+                                <p class="product-card__desc">A playful apron sample suited for garden classes and hands-on family activities.</p>
                                 <div class="product-card__meta">
                                     <span>Sample Text</span>
                                     <strong>26,000 KRW</strong>
@@ -208,7 +206,7 @@
                             </div>
                         </article>
 
-                        <article class="product-card">
+                        <article class="product-card" data-product-link="./detail-baby-dream-nap-floor-mat.html" tabindex="0" role="link">
                             <div class="product-card__image">
                                 <img src="./assets/images/card_img07.png" alt="Dream nap floor mat">
                                 <span class="product-card__badge">SALE</span>
@@ -216,7 +214,7 @@
                             <div class="product-card__body">
                                 <p class="product-card__category">Rest</p>
                                 <h3>Dream Nap Floor Mat</h3>
-                                <p class="product-card__desc">휴식 공간 연출용 바닥 매트와 쿠션 카테고리 예시</p>
+                                <p class="product-card__desc">A floor mat sample for soft rest corners, reading nooks, and cozy family routines.</p>
                                 <div class="product-card__meta">
                                     <span>Sample Text</span>
                                     <strong>41,000 KRW</strong>

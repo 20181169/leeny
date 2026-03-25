@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/css/home.css">
     <link rel="stylesheet" href="./assets/css/product.css">
     <script src="./assets/js/home.js" defer></script>
+    <script src="./assets/js/product-card-links.js" defer></script>
 </head>
 <body class="product-page">
     <header class="site-header site-header--minimal site-header--productlike">
@@ -19,8 +20,8 @@
                 <div class="site-nav__dropdown">
                     <button type="button" class="site-nav__trigger" aria-expanded="false">Company</button>
                     <div class="site-nav__menu">
-                        <a href="./company-overview.html">?뚯궗媛쒖슂</a>
-                        <a href="./company-history.html">?고쁺</a>
+                        <a href="./company-overview.html">Company Overview</a>
+                        <a href="./company-history.html">History</a>
                         <a href="./contact.html">Contact</a>
                     </div>
                 </div>
@@ -39,8 +40,8 @@
         </div>
 
         <div class="mobile-menu" id="mobile-menu">
-            <a href="./company-overview.html">?뚯궗媛쒖슂</a>
-            <a href="./company-history.html">?고쁺</a>
+            <a href="./company-overview.html">Company Overview</a>
+            <a href="./company-history.html">History</a>
             <a href="./contact.html">Contact</a>
             <a href="./product-baby-kids.html" class="is-current">Product</a>
         </div>
@@ -102,12 +103,12 @@
                         </div>
                     </div>
                     <div class="catalog__grid">
-                        <article class="product-card"><div class="product-card__image"><img src="./assets/images/gall_img01.jpg" alt="Story picnic basket"><span class="product-card__badge">BEST</span></div><div class="product-card__body"><p class="product-card__category">Story</p><h3>Story Picnic Basket</h3><p class="product-card__desc">A soft floral and picnic mood for a playful family storytelling set.</p><div class="product-card__meta"><span>Sample Text</span><strong>32,000 KRW</strong></div></div></article>
-                        <article class="product-card" id="wild-cozy-camp"><div class="product-card__image"><img src="./assets/images/card_img07.png" alt="Cozy camp mat"><span class="product-card__badge">NEW</span></div><div class="product-card__body"><p class="product-card__category">Camp</p><h3>Cozy Camp Mat</h3><p class="product-card__desc">A layered floor item that supports quiet play and story-led rest.</p><div class="product-card__meta"><span>Sample Text</span><strong>39,000 KRW</strong></div></div></article>
-                        <article class="product-card" id="wild-adventure"><div class="product-card__image"><img src="./assets/images/card_img06.png" alt="Adventure apron set"><span class="product-card__badge">EDIT</span></div><div class="product-card__body"><p class="product-card__category">Play</p><h3>Adventure Apron Set</h3><p class="product-card__desc">A costume-like item for imaginative play, workshops, and maker moments.</p><div class="product-card__meta"><span>Sample Text</span><strong>25,000 KRW</strong></div></div></article>
-                        <article class="product-card"><div class="product-card__image"><img src="./assets/images/gall_img03.jpg" alt="Sky journal case"><span class="product-card__badge">SET</span></div><div class="product-card__body"><p class="product-card__category">Journal</p><h3>Sky Journal Case</h3><p class="product-card__desc">A calm everyday case for memory-keeping and themed story routines.</p><div class="product-card__meta"><span>Sample Text</span><strong>28,000 KRW</strong></div></div></article>
-                        <article class="product-card"><div class="product-card__image"><img src="./assets/images/carseat_1.png" alt="Explorer ride set"><span class="product-card__badge">PICK</span></div><div class="product-card__body"><p class="product-card__category">Move</p><h3>Explorer Ride Set</h3><p class="product-card__desc">A movement-focused item reimagined as part of an adventure story line.</p><div class="product-card__meta"><span>Sample Text</span><strong>48,000 KRW</strong></div></div></article>
-                        <article class="product-card"><div class="product-card__image"><img src="./assets/images/gall_img02.jpg" alt="Camp cup tote"><span class="product-card__badge">SALE</span></div><div class="product-card__body"><p class="product-card__category">Outdoor</p><h3>Camp Cup Tote</h3><p class="product-card__desc">A friendly outdoor-ready piece for simple storytelling and family trips.</p><div class="product-card__meta"><span>Sample Text</span><strong>20,000 KRW</strong></div></div></article>
+                        <article class="product-card" data-product-link="./detail-wild-story-picnic-basket.html" tabindex="0" role="link"><div class="product-card__image"><img src="./assets/images/gall_img01.jpg" alt="Story picnic basket"><span class="product-card__badge">BEST</span></div><div class="product-card__body"><p class="product-card__category">Story</p><h3>Story Picnic Basket</h3><p class="product-card__desc">A soft floral and picnic mood for a playful family storytelling set.</p><div class="product-card__meta"><span>Sample Text</span><strong>32,000 KRW</strong></div></div></article>
+                        <article class="product-card" id="wild-cozy-camp" data-product-link="./detail-wild-cozy-camp-mat.html" tabindex="0" role="link"><div class="product-card__image"><img src="./assets/images/card_img07.png" alt="Cozy camp mat"><span class="product-card__badge">NEW</span></div><div class="product-card__body"><p class="product-card__category">Camp</p><h3>Cozy Camp Mat</h3><p class="product-card__desc">A layered floor item that supports quiet play and story-led rest.</p><div class="product-card__meta"><span>Sample Text</span><strong>39,000 KRW</strong></div></div></article>
+                        <article class="product-card" id="wild-adventure" data-product-link="./detail-wild-adventure-apron-set.html" tabindex="0" role="link"><div class="product-card__image"><img src="./assets/images/card_img06.png" alt="Adventure apron set"><span class="product-card__badge">EDIT</span></div><div class="product-card__body"><p class="product-card__category">Play</p><h3>Adventure Apron Set</h3><p class="product-card__desc">A costume-like item for imaginative play, workshops, and maker moments.</p><div class="product-card__meta"><span>Sample Text</span><strong>25,000 KRW</strong></div></div></article>
+                        <article class="product-card" data-product-link="./detail-wild-sky-journal-case.html" tabindex="0" role="link"><div class="product-card__image"><img src="./assets/images/gall_img03.jpg" alt="Sky journal case"><span class="product-card__badge">SET</span></div><div class="product-card__body"><p class="product-card__category">Journal</p><h3>Sky Journal Case</h3><p class="product-card__desc">A calm everyday case for memory-keeping and themed story routines.</p><div class="product-card__meta"><span>Sample Text</span><strong>28,000 KRW</strong></div></div></article>
+                        <article class="product-card" data-product-link="./detail-wild-explorer-ride-set.html" tabindex="0" role="link"><div class="product-card__image"><img src="./assets/images/carseat_1.png" alt="Explorer ride set"><span class="product-card__badge">PICK</span></div><div class="product-card__body"><p class="product-card__category">Move</p><h3>Explorer Ride Set</h3><p class="product-card__desc">A movement-focused item reimagined as part of an adventure story line.</p><div class="product-card__meta"><span>Sample Text</span><strong>48,000 KRW</strong></div></div></article>
+                        <article class="product-card" data-product-link="./detail-wild-camp-cup-tote.html" tabindex="0" role="link"><div class="product-card__image"><img src="./assets/images/gall_img02.jpg" alt="Camp cup tote"><span class="product-card__badge">SALE</span></div><div class="product-card__body"><p class="product-card__category">Outdoor</p><h3>Camp Cup Tote</h3><p class="product-card__desc">A friendly outdoor-ready piece for simple storytelling and family trips.</p><div class="product-card__meta"><span>Sample Text</span><strong>20,000 KRW</strong></div></div></article>
                     </div>
                 </div>
             </div>
@@ -115,3 +116,6 @@
     </main>
 </body>
 </html>
+
+
+

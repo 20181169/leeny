@@ -1,5 +1,5 @@
 :root{
-    --wm-bg: #fff8f7;
+    --wm-bg: #fff5f6;
     --wm-bg-deep: #fbe7ea;
     --wm-surface: rgba(255,255,255,.7);
     --wm-line: rgba(103, 48, 59, 0.12);
@@ -221,12 +221,12 @@ a{
 }
 
 .simple-hero__slide--primary{
-    background-image: url('http://tnsinter.godohosting.com/public_html/todbi_com/main/main_rolllol_pc.jpg');
+    background-image: url('../images/임부복1.png');
     animation: heroSlidePrimary 6s ease-in-out infinite;
 }
 
 .simple-hero__slide--secondary{
-    background-image: url('http://tnsinter.godohosting.com/public_html/todbi_com/main/main_airoon.jpg');
+    background-image: url('../images/임부복2.png');
     animation: heroSlideSecondary 6s ease-in-out infinite;
 }
 
@@ -243,7 +243,7 @@ a{
 .simple-hero__copy h1{
     margin: 0;
     font-family: 'NotoSansCJKkr', sans-serif;
-    font-size: clamp(34px, 4.2vw, 58px);
+    font-size: clamp(30px, 3.8vw, 50px);
     font-weight: 700;
     line-height: 1.18;
     letter-spacing: -.03em;
@@ -251,7 +251,7 @@ a{
 }
 
 .simple-hero__copy span{
-    color: #ffd1d9;
+    color: #f37b83;
 }
 
 @keyframes heroSlidePrimary{
@@ -393,7 +393,7 @@ a{
     margin-bottom: 0;
     object-fit: contain;
     filter: none;
-    transform: scale(4.2);
+    transform: translateX(-140px) scale(4.2);
     transform-origin: left center;
 }
 
@@ -466,7 +466,7 @@ a{
 }
 
 .site-header--productlike .site-header__inner{
-    padding: 14px 72px;
+    padding: 14px 24px;
 }
 
 .site-header--productlike .site-header__logo{
@@ -613,7 +613,7 @@ a{
     }
 
     .site-header--productlike .site-header__inner{
-        padding: 12px 28px;
+        padding: 12px 24px;
     }
 }
 
@@ -634,7 +634,7 @@ a{
     }
 
     .simple-hero__copy h1{
-        font-size: 42px;
+        font-size: 36px;
     }
 
     .simple-history__inner,
