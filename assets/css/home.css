@@ -191,12 +191,9 @@ a{
     align-items: center;
     min-height: 620px;
     overflow: hidden;
-    background-image:
+    background:
         linear-gradient(90deg, rgba(122, 33, 54, 0.76) 0%, rgba(122, 33, 54, 0.54) 24%, rgba(122, 33, 54, 0.2) 52%, rgba(122, 33, 54, 0.04) 100%),
-        url('http://tnsinter.godohosting.com/public_html/todbi_com/main/main_rolllol_pc.jpg');
-    background-position: center center, center 0%;
-    background-repeat: no-repeat, no-repeat;
-    background-size: auto, cover;
+        linear-gradient(135deg, rgba(240, 95, 121, 0.14), rgba(248, 196, 204, 0.1));
     box-shadow: 0 12px 24px rgba(216, 74, 99, 0.08);
     border-radius: 24px;
 }
@@ -207,6 +204,30 @@ a{
     inset: 0;
     background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(122, 33, 54, 0.06));
     pointer-events: none;
+}
+
+.simple-hero__slides{
+    position: absolute;
+    inset: 0;
+}
+
+.simple-hero__slide{
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0%;
+    opacity: 0;
+}
+
+.simple-hero__slide--primary{
+    background-image: url('http://tnsinter.godohosting.com/public_html/todbi_com/main/main_rolllol_pc.jpg');
+    animation: heroSlidePrimary 6s ease-in-out infinite;
+}
+
+.simple-hero__slide--secondary{
+    background-image: url('http://tnsinter.godohosting.com/public_html/todbi_com/main/main_airoon.jpg');
+    animation: heroSlideSecondary 6s ease-in-out infinite;
 }
 
 .simple-hero__copy{
@@ -231,6 +252,30 @@ a{
 
 .simple-hero__copy span{
     color: #ffd1d9;
+}
+
+@keyframes heroSlidePrimary{
+    0%, 42%{
+        opacity: 1;
+    }
+    50%, 92%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes heroSlideSecondary{
+    0%, 42%{
+        opacity: 0;
+    }
+    50%, 92%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 
 .simple-intro{
