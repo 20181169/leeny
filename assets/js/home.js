@@ -1,10 +1,10 @@
 const body = document.body;
 const headerNav = document.querySelector('.site-nav');
-const homeDropdowns = document.querySelectorAll('.site-nav__dropdown');
 const mobileToggle = document.querySelector('.site-header__toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
 
 const isGreetingPage = body.classList.contains('greeting-page');
+const isHistoryPage = body.classList.contains('history-page');
 const isLandingPage =
     body.classList.contains('home-page') &&
     !body.classList.contains('company-page') &&
@@ -15,84 +15,84 @@ const isCompanyPage = body.classList.contains('company-page') && !isContactPage 
 const isProductPage = body.classList.contains('product-page');
 
 if (headerNav) {
-    const directLinks = Array.from(headerNav.children).filter((item) => item.classList.contains('site-nav__link'));
-    const companyDropdown = headerNav.querySelector('.site-nav__dropdown:not(.site-nav__dropdown--hover)');
-    const productDropdown = headerNav.querySelector('.site-nav__dropdown--hover');
-    const companyTrigger = companyDropdown?.querySelector('.site-nav__trigger');
-    const companyMenuLinks = companyDropdown ? Array.from(companyDropdown.querySelectorAll('.site-nav__menu a')) : [];
-    const productLink = productDropdown?.querySelector('.site-nav__link');
-    const contactLink = directLinks.find((link) => link.getAttribute('href') === './contact.html');
+    let productDropdown = headerNav.querySelector('.site-nav__dropdown--hover');
+    let companyDropdown = Array.from(headerNav.children).find(
+        (item) => item.classList.contains('site-nav__dropdown') && !item.classList.contains('site-nav__dropdown--hover')
+    );
 
     let introLink = headerNav.querySelector('.site-nav__link--intro');
-
     if (!introLink) {
         introLink = document.createElement('a');
-        introLink.href = './greeting.html';
         introLink.className = 'site-nav__link site-nav__link--intro';
-        if (companyDropdown) {
-            headerNav.insertBefore(introLink, companyDropdown);
-        } else {
-            headerNav.prepend(introLink);
-        }
-    } else {
-        introLink.href = './greeting.html';
     }
-
+    introLink.href = './greeting.html';
     introLink.textContent = '인사말';
 
-    if (companyTrigger) {
-        companyTrigger.textContent = '회사소개';
+    let companyLink = headerNav.querySelector('.site-nav__link--company');
+    if (!companyLink) {
+        companyLink = document.createElement('a');
+        companyLink.className = 'site-nav__link site-nav__link--company';
+    }
+    companyLink.href = './company-overview.html';
+    companyLink.textContent = '회사소개';
+
+    if (companyDropdown) {
+        headerNav.replaceChild(companyLink, companyDropdown);
     }
 
-    companyMenuLinks.forEach((link) => {
-        const href = link.getAttribute('href');
-        if (href === './company-overview.html') {
-            link.textContent = '회사소개';
-        } else if (href === './company-history.html') {
-            link.textContent = '연혁';
-        } else if (href === './contact.html') {
-            link.textContent = '문의';
+    if (!introLink.parentElement) {
+        headerNav.prepend(introLink);
+    }
+    headerNav.insertBefore(introLink, companyLink);
+
+    productDropdown = headerNav.querySelector('.site-nav__dropdown--hover');
+    if (productDropdown) {
+        const productLink = productDropdown.querySelector('.site-nav__link');
+        if (productLink) {
+            productLink.textContent = '제품소개';
         }
-    });
-
-    if (productLink) {
-        productLink.textContent = '제품소개';
     }
 
+    const contactLink = Array.from(headerNav.children).find(
+        (item) => item.classList.contains('site-nav__link') && item.getAttribute('href') === './contact.html'
+    );
     if (contactLink) {
         contactLink.textContent = '문의';
     }
 
-    headerNav.querySelectorAll('.site-nav__link--active').forEach((link) => link.classList.remove('site-nav__link--active'));
-    headerNav.querySelectorAll('.site-nav__trigger--active').forEach((trigger) => trigger.classList.remove('site-nav__trigger--active'));
+    headerNav.querySelectorAll('.site-nav__link--active').forEach((link) => {
+        link.classList.remove('site-nav__link--active');
+    });
+    headerNav.querySelectorAll('.site-nav__trigger--active').forEach((trigger) => {
+        trigger.classList.remove('site-nav__trigger--active');
+    });
 
-    if ((isLandingPage || isGreetingPage) && introLink) {
+    if (isLandingPage || isGreetingPage) {
         introLink.classList.add('site-nav__link--active');
     } else if (isContactPage && contactLink) {
         contactLink.classList.add('site-nav__link--active');
-    } else if (isCompanyPage && companyTrigger) {
-        companyTrigger.classList.add('site-nav__trigger--active');
-    } else if (isProductPage && productLink) {
-        productLink.classList.add('site-nav__link--active');
+    } else if (isCompanyPage || isHistoryPage) {
+        companyLink.classList.add('site-nav__link--active');
+    } else if (isProductPage && productDropdown) {
+        productDropdown.querySelector('.site-nav__link')?.classList.add('site-nav__link--active');
     }
 }
 
 if (mobileMenu) {
-    const mobileLinks = Array.from(mobileMenu.querySelectorAll('a'));
-    let mobileIntroLink = mobileLinks.find((link) => link.classList.contains('mobile-menu__intro'));
+    const existingLinks = Array.from(mobileMenu.querySelectorAll('a'));
+    let mobileIntroLink = existingLinks.find((link) => link.classList.contains('mobile-menu__intro'));
 
     if (!mobileIntroLink) {
         mobileIntroLink = document.createElement('a');
-        mobileIntroLink.href = './greeting.html';
         mobileIntroLink.className = 'mobile-menu__intro';
         mobileMenu.prepend(mobileIntroLink);
-    } else {
-        mobileIntroLink.href = './greeting.html';
     }
 
+    mobileIntroLink.href = './greeting.html';
     mobileIntroLink.textContent = '인사말';
 
-    mobileLinks.concat(mobileIntroLink).forEach((link) => {
+    const mobileLinks = Array.from(mobileMenu.querySelectorAll('a'));
+    mobileLinks.forEach((link) => {
         const href = link.getAttribute('href');
         link.classList.remove('is-current');
 
@@ -113,19 +113,22 @@ if (mobileMenu) {
         mobileIntroLink.classList.add('is-current');
     } else if (isContactPage) {
         mobileMenu.querySelector('a[href="./contact.html"]')?.classList.add('is-current');
+    } else if (isHistoryPage) {
+        mobileMenu.querySelector('a[href="./company-history.html"]')?.classList.add('is-current');
     } else if (isCompanyPage) {
-        const companyCurrent = body.classList.contains('history-page')
-            ? mobileMenu.querySelector('a[href="./company-history.html"]')
-            : mobileMenu.querySelector('a[href="./company-overview.html"]');
-        companyCurrent?.classList.add('is-current');
+        mobileMenu.querySelector('a[href="./company-overview.html"]')?.classList.add('is-current');
     } else if (isProductPage) {
         mobileMenu.querySelector('a[href="./product-baby-kids.html"]')?.classList.add('is-current');
     }
 }
 
-if (homeDropdowns.length) {
+const triggerDropdowns = Array.from(document.querySelectorAll('.site-nav__dropdown')).filter((dropdown) =>
+    dropdown.querySelector('.site-nav__trigger')
+);
+
+if (triggerDropdowns.length) {
     const closeAllMenus = () => {
-        homeDropdowns.forEach((dropdown) => {
+        triggerDropdowns.forEach((dropdown) => {
             const trigger = dropdown.querySelector('.site-nav__trigger');
             const menu = dropdown.querySelector('.site-nav__menu');
             if (trigger && menu) {
@@ -135,7 +138,7 @@ if (homeDropdowns.length) {
         });
     };
 
-    homeDropdowns.forEach((dropdown) => {
+    triggerDropdowns.forEach((dropdown) => {
         const trigger = dropdown.querySelector('.site-nav__trigger');
         const menu = dropdown.querySelector('.site-nav__menu');
 
@@ -147,6 +150,7 @@ if (homeDropdowns.length) {
             event.stopPropagation();
             const shouldOpen = !menu.classList.contains('is-open');
             closeAllMenus();
+
             if (shouldOpen) {
                 menu.classList.add('is-open');
                 trigger.setAttribute('aria-expanded', 'true');
@@ -155,7 +159,7 @@ if (homeDropdowns.length) {
     });
 
     document.addEventListener('click', (event) => {
-        const clickedInsideDropdown = Array.from(homeDropdowns).some((dropdown) => dropdown.contains(event.target));
+        const clickedInsideDropdown = triggerDropdowns.some((dropdown) => dropdown.contains(event.target));
         if (!clickedInsideDropdown) {
             closeAllMenus();
         }

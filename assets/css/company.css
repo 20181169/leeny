@@ -64,7 +64,7 @@
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(240, 95, 121, 0.14);
-    border-radius: 32px;
+    border-radius: 14px;
     background: rgba(255,255,255,0.78);
     box-shadow: 0 20px 40px rgba(216, 74, 99, 0.08);
 }
@@ -77,7 +77,7 @@
     display: inline-flex;
     margin-bottom: 18px;
     padding: 8px 12px;
-    border-radius: 999px;
+    border-radius: 14px;
     background: rgba(240, 95, 121, 0.12);
     color: var(--wm-watermelon-deep);
     font-family: 'Archivo', sans-serif;
@@ -113,7 +113,7 @@
 
 .company-hero__chips span{
     padding: 10px 14px;
-    border-radius: 999px;
+    border-radius: 14px;
     background: rgba(240, 95, 121, 0.12);
     color: var(--wm-text);
     font-family: 'Archivo', sans-serif;
@@ -313,7 +313,7 @@
 .company-card{
     padding: 32px;
     border: 1px solid rgba(240, 95, 121, 0.14);
-    border-radius: 28px;
+    border-radius: 14px;
     background: rgba(255,255,255,0.78);
     box-shadow: 0 18px 36px rgba(216, 74, 99, 0.07);
 }
@@ -361,7 +361,7 @@
 
 .company-point{
     padding: 20px;
-    border-radius: 22px;
+    border-radius: 14px;
     background: rgba(240, 95, 121, 0.08);
 }
 
@@ -386,7 +386,7 @@
 
 .company-kpis article{
     padding: 18px 20px;
-    border-radius: 22px;
+    border-radius: 14px;
     background: rgba(240, 95, 121, 0.08);
 }
 
@@ -431,7 +431,7 @@
 .history-panel{
     padding: 30px;
     border: 1px solid rgba(240, 95, 121, 0.14);
-    border-radius: 28px;
+    border-radius: 14px;
     background: rgba(255,255,255,0.78);
     box-shadow: 0 18px 36px rgba(216, 74, 99, 0.07);
 }
@@ -465,7 +465,7 @@
     gap: 18px;
     padding: 24px 26px;
     border: 1px solid rgba(240, 95, 121, 0.14);
-    border-radius: 28px;
+    border-radius: 14px;
     background: rgba(255,255,255,0.78);
     box-shadow: 0 18px 36px rgba(216, 74, 99, 0.07);
 }

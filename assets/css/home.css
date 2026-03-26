@@ -60,7 +60,7 @@ a{
     width: 126px;
     padding: 10px 14px;
     border: 1px solid rgba(255,255,255,.18);
-    border-radius: 999px;
+    border-radius: 14px;
     background: rgba(255,255,255,.14);
     backdrop-filter: blur(12px);
 }
@@ -76,7 +76,7 @@ a{
     margin-left: auto;
     padding: 6px;
     border: 1px solid rgba(255,255,255,.18);
-    border-radius: 999px;
+    border-radius: 14px;
     background: rgba(255,255,255,.14);
     backdrop-filter: blur(12px);
 }
@@ -88,7 +88,7 @@ a{
     justify-content: center;
     min-height: 50px;
     padding: 10px 18px;
-    border-radius: 999px;
+    border-radius: 14px;
     background: transparent;
     color: var(--wm-white);
     font-family: 'Archivo', sans-serif;
@@ -122,7 +122,7 @@ a{
     min-width: 220px;
     padding: 12px;
     border: 1px solid var(--wm-line);
-    border-radius: 22px;
+    border-radius: 14px;
     background: rgba(53, 33, 39, 0.94);
     box-shadow: 0 18px 40px rgba(103, 48, 59, 0.12);
     transform: translateX(-50%);
@@ -149,7 +149,7 @@ a{
     display: none;
     padding: 10px 16px;
     border: 1px solid rgba(255,255,255,.18);
-    border-radius: 999px;
+    border-radius: 14px;
     background: rgba(255,255,255,.14);
     color: var(--wm-white);
     font-family: 'Archivo', sans-serif;
@@ -197,7 +197,7 @@ a{
         linear-gradient(90deg, rgba(122, 33, 54, 0.76) 0%, rgba(122, 33, 54, 0.54) 24%, rgba(122, 33, 54, 0.2) 52%, rgba(122, 33, 54, 0.04) 100%),
         linear-gradient(135deg, rgba(240, 95, 121, 0.14), rgba(248, 196, 204, 0.1));
     box-shadow: 0 12px 24px rgba(216, 74, 99, 0.08);
-    border-radius: 24px;
+    border-radius: 14px;
 }
 
 .simple-hero__panel::before{
@@ -344,7 +344,7 @@ a{
     gap: 18px;
     padding: 18px 20px;
     border: 1px solid rgba(240, 95, 121, 0.12);
-    border-radius: 20px;
+    border-radius: 14px;
     background: rgba(255,255,255,.5);
 }
 
@@ -477,7 +477,7 @@ a{
     height: 56px;
     padding: 0;
     border: 0;
-    border-radius: 0;
+    border-radius: 14px;
     background: transparent;
     backdrop-filter: none;
     overflow: visible;
@@ -499,7 +499,7 @@ a{
     margin-left: auto;
     padding: 0;
     border: 0;
-    border-radius: 0;
+    border-radius: 14px;
     background: transparent;
     backdrop-filter: none;
     justify-content: flex-end;
@@ -515,7 +515,7 @@ a{
     color: var(--wm-text);
     font-size: 15px;
     letter-spacing: .06em;
-    border-radius: 0;
+    border-radius: 14px;
     overflow: visible;
     text-align: center;
     white-space: nowrap;
@@ -529,7 +529,7 @@ a{
     right: 14px;
     bottom: 10px;
     height: 14px;
-    border-radius: 999px;
+    border-radius: 14px;
     background: rgba(240, 95, 121, 0.22);
     opacity: 0;
     transition: opacity .2s ease;
@@ -556,7 +556,7 @@ a{
 .site-header--productlike .site-nav__menu{
     min-width: 188px;
     border-color: rgba(31, 26, 23, 0.12);
-    border-radius: 22px;
+    border-radius: 14px;
     background: rgba(255,255,255,.96);
     box-shadow: 0 18px 40px rgba(31, 26, 23, 0.12);
 }
@@ -596,7 +596,7 @@ a{
     width: 40px;
     height: 40px;
     border: 0;
-    border-radius: 0;
+    border-radius: 14px;
     background: transparent;
     color: var(--wm-text);
     padding: 0;
@@ -611,7 +611,7 @@ a{
     left: 8px;
     width: 24px;
     height: 2px;
-    border-radius: 999px;
+    border-radius: 14px;
     background: var(--wm-text);
 }
 
@@ -644,7 +644,7 @@ a{
     width: min(220px, calc(100vw - 40px));
     margin: 0;
     padding: 14px 18px 16px;
-    border-radius: 18px;
+    border-radius: 14px;
     background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(16px);
     box-shadow: 0 18px 40px rgba(91, 48, 56, 0.1);
@@ -654,7 +654,7 @@ a{
     width: 100%;
     padding: 8px 0;
     border: 0;
-    border-radius: 0;
+    border-radius: 14px;
     background: transparent;
     color: var(--wm-text);
     font-size: 15px;

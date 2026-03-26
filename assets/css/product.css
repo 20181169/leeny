@@ -73,7 +73,7 @@ a{
     position: relative;
     padding: 10px 18px;
     border: 0;
-    border-radius: 0;
+    border-radius: 14px;
     background: transparent;
     color: inherit;
     font-family: 'Archivo', sans-serif;
@@ -92,7 +92,7 @@ a{
     right: 14px;
     bottom: 10px;
     height: 14px;
-    border-radius: 999px;
+    border-radius: 14px;
     background: rgba(240, 95, 121, 0.22);
     opacity: 0;
     transition: opacity .2s ease;
@@ -128,7 +128,7 @@ a{
     min-width: 188px;
     padding: 12px;
     border: 1px solid var(--product-line);
-    border-radius: 22px;
+    border-radius: 14px;
     background: rgba(255,255,255,.96);
     box-shadow: 0 18px 40px rgba(103, 48, 59, 0.12);
     transform: translateX(-50%);
@@ -196,7 +196,7 @@ a{
 .product-hero__meta span{
     padding: 10px 16px;
     border: 1px solid var(--product-line);
-    border-radius: 999px;
+    border-radius: 14px;
     background: rgba(255,255,255,.55);
     font-family: 'Archivo', sans-serif;
     font-size: 13px;
@@ -212,14 +212,14 @@ a{
     content: '';
     position: absolute;
     inset: -24px 36px 44px -24px;
-    border-radius: 34px;
+    border-radius: 14px;
     background: linear-gradient(180deg, rgba(251, 231, 234, 0.96), rgba(255,255,255,0));
     z-index: -1;
 }
 
 .product-hero__image-frame{
     overflow: hidden;
-    border-radius: 28px;
+    border-radius: 14px;
     box-shadow: 0 28px 60px rgba(31, 26, 23, 0.12);
     aspect-ratio: 4 / 4.5;
 }
@@ -235,7 +235,7 @@ a{
     margin: -44px 0 0 auto;
     padding: 22px 24px;
     border: 1px solid rgba(255,255,255,.65);
-    border-radius: 22px;
+    border-radius: 14px;
     background: rgba(91, 48, 56, 0.9);
     color: #fff;
     box-shadow: 0 18px 40px rgba(31, 26, 23, 0.18);
@@ -281,7 +281,7 @@ a{
 .catalog__toolbar span{
     padding: 12px 18px;
     border: 1px solid var(--product-line);
-    border-radius: 999px;
+    border-radius: 14px;
     background: rgba(255,255,255,.7);
 }
 
@@ -317,7 +317,7 @@ a{
 .catalog__panel,
 .catalog__content{
     border: 1px solid var(--product-line);
-    border-radius: 28px;
+    border-radius: 14px;
     background: rgba(255,255,255,.7);
     box-shadow: 0 12px 30px rgba(103, 48, 59, 0.05);
 }
@@ -342,7 +342,7 @@ a{
 .catalog__menu a{
     display: block;
     padding: 12px 14px;
-    border-radius: 16px;
+    border-radius: 14px;
     color: var(--product-muted);
     font-size: 15px;
     font-weight: 700;
@@ -384,7 +384,7 @@ a{
     flex-direction: column;
     gap: 4px;
     padding: 12px 14px;
-    border-radius: 16px;
+    border-radius: 14px;
     background: rgba(255,255,255,.74);
 }
 
@@ -412,7 +412,7 @@ a{
 
 .catalog__guide-tags span{
     padding: 9px 12px;
-    border-radius: 999px;
+    border-radius: 14px;
     background: rgba(91, 48, 56, 0.9);
     color: #fff;
     font-family: 'Archivo', sans-serif;
@@ -525,7 +525,7 @@ a{
     align-items: center;
     margin-top: 18px;
     padding: 10px 14px;
-    border-radius: 999px;
+    border-radius: 14px;
     background: rgba(91, 48, 56, 0.9);
     color: #fff;
     font-family: 'Archivo', sans-serif;
@@ -589,7 +589,7 @@ a{
 
 .catalog__feature-image{
     overflow: hidden;
-    border-radius: 22px;
+    border-radius: 14px;
     min-height: 320px;
 }
 
@@ -661,7 +661,7 @@ a{
     top: 14px;
     left: 14px;
     padding: 8px 10px;
-    border-radius: 999px;
+    border-radius: 14px;
     background: rgba(91, 48, 56, 0.88);
     color: #fff;
     font-family: 'Archivo', sans-serif;
