@@ -155,7 +155,7 @@ a{
     grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
     gap: 48px;
     align-items: center;
-    padding: 88px 300px 56px;
+    padding: 88px clamp(48px, 12vw, 300px) 56px;
 }
 
 .product-hero__eyebrow,
@@ -256,7 +256,7 @@ a{
 }
 
 .catalog{
-    padding: 0 300px 88px;
+    padding: 0 clamp(48px, 12vw, 300px) 88px;
 }
 
 .catalog [id]{
@@ -462,6 +462,7 @@ a{
     font-weight: 900;
     line-height: .95;
     letter-spacing: -.04em;
+    word-break: normal;
 }
 
 .catalog__promo-copy p{
@@ -498,12 +499,22 @@ a{
     margin-bottom: 30px;
 }
 
+.catalog__headline > div,
+.catalog__summary,
+.catalog__feature-copy{
+    min-width: 0;
+}
+
 .catalog__headline h2{
     margin: 0;
     font-family: 'Archivo', sans-serif;
     font-size: clamp(28px, 3vw, 44px);
     font-weight: 900;
     letter-spacing: -.03em;
+    line-height: 1.1;
+    word-break: normal;
+    overflow-wrap: normal;
+    white-space: normal;
 }
 
 .catalog__summary{
@@ -547,6 +558,10 @@ a{
     font-size: 34px;
     font-weight: 900;
     letter-spacing: -.03em;
+    line-height: 1.08;
+    word-break: normal;
+    overflow-wrap: normal;
+    white-space: normal;
 }
 
 .catalog__feature-copy p:last-child{
@@ -650,6 +665,13 @@ a{
     font-family: 'Archivo', sans-serif;
     font-size: 15px;
     font-weight: 900;
+}
+
+@media (max-width: 1400px){
+    .catalog__headline{
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+    }
 }
 
 @media (max-width: 1200px){
