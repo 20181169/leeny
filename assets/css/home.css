@@ -367,7 +367,7 @@ a{
 
 .simple-footer{
     margin-top: 54px;
-    background: #f39696;
+    background: #f37b83;
     color: var(--wm-white);
 }
 
@@ -466,6 +466,7 @@ a{
 }
 
 .site-header--productlike .site-header__inner{
+    position: relative;
     padding: 14px 24px;
 }
 
@@ -489,24 +490,33 @@ a{
 }
 
 .site-header--productlike .site-nav{
+    position: static;
+    left: auto;
+    transform: none;
     gap: 10px;
+    margin-left: auto;
     padding: 0;
     border: 0;
     border-radius: 0;
     background: transparent;
     backdrop-filter: none;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .site-header--productlike .site-nav__link,
 .site-header--productlike .site-nav__trigger{
     position: relative;
     min-height: auto;
-    padding: 10px 18px;
+    padding: 10px 14px;
     color: var(--wm-text);
-    font-size: 13px;
+    font-size: 15px;
     letter-spacing: .06em;
     border-radius: 0;
     overflow: visible;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .site-header--productlike .site-nav__link::after,
@@ -551,7 +561,8 @@ a{
 
 .site-header--productlike .site-nav__menu a{
     color: var(--wm-text);
-    font-size: 13px;
+    font-size: 15px;
+    text-align: center;
 }
 
 .site-header--productlike .site-nav__menu a:hover{
@@ -578,20 +589,84 @@ a{
 }
 
 .site-header--productlike .site-header__toggle{
-    border: 1px solid var(--wm-line);
-    background: rgba(255,255,255,.9);
+    position: relative;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
     color: var(--wm-text);
-    padding: 10px 16px;
+    padding: 0;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.site-header--productlike .site-header__toggle::before,
+.site-header--productlike .site-header__toggle::after{
+    content: '';
+    position: absolute;
+    left: 8px;
+    width: 24px;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--wm-text);
+    transition: transform .2s ease, opacity .2s ease, top .2s ease, box-shadow .2s ease;
+}
+
+.site-header--productlike .site-header__toggle::before{
+    top: 13px;
+    box-shadow: 0 7px 0 var(--wm-text);
+}
+
+.site-header--productlike .site-header__toggle::after{
+    top: 27px;
+}
+
+.site-header--productlike .site-header__toggle[aria-expanded="true"]::before{
+    top: 20px;
+    box-shadow: none;
+    transform: rotate(45deg);
+}
+
+.site-header--productlike .site-header__toggle[aria-expanded="true"]::after{
+    top: 20px;
+    transform: rotate(-45deg);
+}
+
+.site-header--productlike .mobile-menu{
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 20px;
+    align-items: flex-start;
+    gap: 8px;
+    width: min(220px, calc(100vw - 40px));
+    margin: 0;
+    padding: 14px 18px 16px;
+    border-radius: 18px;
+    background: rgba(255, 248, 247, 0.94);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 18px 40px rgba(91, 48, 56, 0.12);
 }
 
 .site-header--productlike .mobile-menu a{
-    border-color: rgba(31, 26, 23, 0.12);
-    background: rgba(255,255,255,.96);
+    width: 100%;
+    padding: 8px 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
     color: var(--wm-text);
+    font-size: 15px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.site-header--productlike .mobile-menu a.is-current{
+    color: var(--wm-watermelon-deep);
 }
 
 @media (max-width: 1024px){
-    .site-header__toggle{
+    .site-header--productlike .site-header__toggle{
         display: inline-flex;
     }
 
@@ -615,14 +690,25 @@ a{
     .site-header--productlike .site-header__inner{
         padding: 12px 24px;
     }
+
+    .site-header--productlike .site-nav{
+        position: static;
+        left: auto;
+        transform: none;
+        margin-left: auto;
+    }
 }
 
 @media (max-width: 720px){
     .site-header__inner,
-    .mobile-menu,
     .simple-main{
         padding-left: 16px;
         padding-right: 16px;
+    }
+
+    .site-header--productlike .mobile-menu{
+        right: 16px;
+        width: min(210px, calc(100vw - 32px));
     }
 
     .simple-hero__panel{
@@ -654,6 +740,15 @@ a{
         grid-template-columns: 1fr;
         padding-left: 16px;
         padding-right: 16px;
+    }
+
+    .simple-footer__brand,
+    .simple-footer__contact{
+        align-self: start;
+    }
+
+    .simple-footer__brand img{
+        transform: translateX(-147px) scale(4.2);
     }
 
     .simple-footer__bottom{
