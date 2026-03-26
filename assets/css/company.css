@@ -257,6 +257,20 @@
     line-height: 1.85;
 }
 
+.contact-card__map{
+    margin-top: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(240, 95, 121, 0.14);
+    border-radius: 22px;
+    background: rgba(255,255,255,0.9);
+}
+
+.contact-card__map img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .contact-info{
     display: grid;
     gap: 14px;

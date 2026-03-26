@@ -4,13 +4,14 @@ const homeDropdowns = document.querySelectorAll('.site-nav__dropdown');
 const mobileToggle = document.querySelector('.site-header__toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
 
+const isGreetingPage = body.classList.contains('greeting-page');
 const isLandingPage =
     body.classList.contains('home-page') &&
     !body.classList.contains('company-page') &&
     !body.classList.contains('contact-page') &&
     !body.classList.contains('product-page');
 const isContactPage = body.classList.contains('contact-page');
-const isCompanyPage = body.classList.contains('company-page') && !isContactPage;
+const isCompanyPage = body.classList.contains('company-page') && !isContactPage && !isGreetingPage;
 const isProductPage = body.classList.contains('product-page');
 
 if (headerNav) {
@@ -26,13 +27,15 @@ if (headerNav) {
 
     if (!introLink) {
         introLink = document.createElement('a');
-        introLink.href = './index.html';
+        introLink.href = './greeting.html';
         introLink.className = 'site-nav__link site-nav__link--intro';
         if (companyDropdown) {
             headerNav.insertBefore(introLink, companyDropdown);
         } else {
             headerNav.prepend(introLink);
         }
+    } else {
+        introLink.href = './greeting.html';
     }
 
     introLink.textContent = '인사말';
@@ -63,7 +66,7 @@ if (headerNav) {
     headerNav.querySelectorAll('.site-nav__link--active').forEach((link) => link.classList.remove('site-nav__link--active'));
     headerNav.querySelectorAll('.site-nav__trigger--active').forEach((trigger) => trigger.classList.remove('site-nav__trigger--active'));
 
-    if (isLandingPage && introLink) {
+    if ((isLandingPage || isGreetingPage) && introLink) {
         introLink.classList.add('site-nav__link--active');
     } else if (isContactPage && contactLink) {
         contactLink.classList.add('site-nav__link--active');
@@ -80,9 +83,11 @@ if (mobileMenu) {
 
     if (!mobileIntroLink) {
         mobileIntroLink = document.createElement('a');
-        mobileIntroLink.href = './index.html';
+        mobileIntroLink.href = './greeting.html';
         mobileIntroLink.className = 'mobile-menu__intro';
         mobileMenu.prepend(mobileIntroLink);
+    } else {
+        mobileIntroLink.href = './greeting.html';
     }
 
     mobileIntroLink.textContent = '인사말';
@@ -99,12 +104,12 @@ if (mobileMenu) {
             link.textContent = '문의';
         } else if (href === './product-baby-kids.html') {
             link.textContent = '제품소개';
-        } else if (href === './index.html') {
+        } else if (href === './greeting.html') {
             link.textContent = '인사말';
         }
     });
 
-    if (isLandingPage) {
+    if (isLandingPage || isGreetingPage) {
         mobileIntroLink.classList.add('is-current');
     } else if (isContactPage) {
         mobileMenu.querySelector('a[href="./contact.html"]')?.classList.add('is-current');
