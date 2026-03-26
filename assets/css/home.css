@@ -8,6 +8,8 @@
     --wm-watermelon: #f05f79;
     --wm-watermelon-deep: #d84a63;
     --wm-white: #ffffff;
+    --page-start-gap: 30px;
+    --page-start-gap-mobile: 24px;
 }
 
 html{
@@ -182,7 +184,7 @@ a{
 }
 
 .simple-hero{
-    padding-top: 30px;
+    padding-top: var(--page-start-gap);
 }
 
 .simple-hero__panel{
@@ -699,6 +701,10 @@ a{
 }
 
 @media (max-width: 720px){
+    :root{
+        --page-start-gap: var(--page-start-gap-mobile);
+    }
+
     .site-header__inner,
     .simple-main{
         padding-left: 16px;

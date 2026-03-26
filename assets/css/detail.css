@@ -3,7 +3,7 @@
 }
 
 .product-detail-main{
-    padding: 52px 0 92px;
+    padding: var(--page-start-gap) 0 92px;
 }
 
 .detail-shell{
@@ -279,7 +279,7 @@
 
 @media (max-width: 720px){
     .product-detail-main{
-        padding: 36px 0 72px;
+        padding: var(--page-start-gap) 0 72px;
     }
 
     .detail-shell{
