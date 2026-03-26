@@ -49,9 +49,9 @@ a{
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    max-width: 1640px;
+    max-width: none;
     margin: 0 auto;
-    padding: 14px 20px;
+    padding: 14px 300px;
 }
 
 .site-header__logo{
@@ -176,9 +176,9 @@ a{
 }
 
 .simple-main{
-    max-width: 1640px;
+    max-width: none;
     margin: 0 auto;
-    padding: 0 24px 80px;
+    padding: 0 300px 80px;
 }
 
 .simple-hero{
@@ -376,9 +376,9 @@ a{
     grid-template-columns: 1.2fr .8fr;
     align-items: center;
     gap: 16px;
-    max-width: 1640px;
+    max-width: none;
     margin: 0 auto;
-    padding: 16px 24px 10px;
+    padding: 16px 300px 10px;
 }
 
 .simple-footer__brand{
@@ -441,9 +441,9 @@ a{
 }
 
 .simple-footer__bottom{
-    max-width: 1640px;
+    max-width: none;
     margin: 0 auto;
-    padding: 0 24px 12px;
+    padding: 0 300px 12px;
 }
 
 .simple-footer__bottom p{
@@ -467,7 +467,7 @@ a{
 
 .site-header--productlike .site-header__inner{
     position: relative;
-    padding: 14px 24px;
+    padding: 14px 300px;
 }
 
 .site-header--productlike .site-header__logo{

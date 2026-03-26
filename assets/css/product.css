@@ -155,7 +155,7 @@ a{
     grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
     gap: 48px;
     align-items: center;
-    padding: 88px 148px 56px;
+    padding: 88px 300px 56px;
 }
 
 .product-hero__eyebrow,
@@ -256,7 +256,7 @@ a{
 }
 
 .catalog{
-    padding: 0 148px 88px;
+    padding: 0 300px 88px;
 }
 
 .catalog [id]{

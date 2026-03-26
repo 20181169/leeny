@@ -1,7 +1,7 @@
 .company-main{
-    max-width: 1640px;
+    max-width: none;
     margin: 0 auto;
-    padding: 124px 24px 80px;
+    padding: 124px 300px 80px;
 }
 
 .company-page .site-header__logo,
@@ -175,9 +175,9 @@
 }
 
 .contact-main{
-    max-width: 1100px;
+    max-width: none;
     margin: 0 auto;
-    padding: 124px 24px 80px;
+    padding: 124px 300px 80px;
 }
 
 .contact-hero{

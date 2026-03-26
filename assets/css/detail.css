@@ -7,9 +7,9 @@
 }
 
 .detail-shell{
-    max-width: 1320px;
+    max-width: none;
     margin: 0 auto;
-    padding: 0 32px;
+    padding: 0 300px;
 }
 
 .detail-breadcrumb{
